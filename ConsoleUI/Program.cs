@@ -1,6 +1,7 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.InMemory;
 using System;
+using System.Runtime.InteropServices;
 
 namespace ConsoleUI
 {
@@ -14,7 +15,6 @@ namespace ConsoleUI
             {
                 Console.WriteLine(product.ProductName);
             }
-
 
         }
     }
