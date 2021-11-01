@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     // Generic constraint
     public interface IEntityRepository<T> where T:class,IEntity,new() //(T bir referans tip olmalı VE T IEntity ya da ondan miras alan birşey olmalıdır)
