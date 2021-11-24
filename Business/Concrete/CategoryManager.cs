@@ -21,6 +21,11 @@ namespace Business.Concrete
             return _categoryDal.GetAll();
         }
 
+        public Category GetBy(int categoryId)
+        {
+            throw new NotImplementedException();
+        }
+
         public Category GetById(int categoryId)
         {
             return _categoryDal.Get(c => c.CategoryId == categoryId);

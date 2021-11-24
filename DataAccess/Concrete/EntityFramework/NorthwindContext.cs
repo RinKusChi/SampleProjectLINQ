@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=true");
+            optionsBuilder.UseNpgsql("Host=localhost;port=5432;Database=Northwind;Username=postgres;Password=123Qwe321");
         }
 
         public DbSet<Product> Products { get; set; }
