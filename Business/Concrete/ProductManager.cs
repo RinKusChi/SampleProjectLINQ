@@ -34,7 +34,7 @@ namespace Business.Concrete
         {
             //iş kodları - örneğin yetkisi var mı?
 
-            if (DateTime.Now.Hour==12)
+            if (DateTime.Now.Hour==10)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
@@ -52,7 +52,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(_productDal.Get(p=>p.ProductId==productId));
         }
 
-        public IDataResult<List<Product>> GetByUnitsPrice(decimal min, decimal max)
+        public IDataResult<List<Product>> GetByUnitsPrice(double min, double max)
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max));
         }
