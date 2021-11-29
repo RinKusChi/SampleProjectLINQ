@@ -29,9 +29,9 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
-        [ValidationAspect(typeof(ProductValidator))]
-        public IResult Add(Product product)
-        {
+            [ValidationAspect(typeof(ProductValidator))]
+            public IResult Add(Product product)
+            {
             IResult result = BusinessRules.Run(CheckIfProductNameExists(product.ProductName),
                                                CheckIfProductCountOfCategoryCorrect(product.CategoryId),
                                                CheckIfCategoryLimitExceded());
