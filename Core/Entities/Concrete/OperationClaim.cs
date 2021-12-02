@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities.Concrete
 {
-    public class OperationClaims:IEntity
+    public class OperationClaim:IEntity
     {
         [Key]
         public int OperationId { get; set; }
